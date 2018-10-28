@@ -29,6 +29,7 @@ var topics = ["Klay Thompson", "Stephen Curry", "Kevin Duran", "Draymond Green",
             myImage.attr("data-still", results[i].images.fixed_height_still.url);
             myImage.attr("data-animate", results[i].images.fixed_height.url);
             myImage.attr("data-state", "still");
+            myImage.attr("id", "gifs")
             myImage.addClass("gif");
 
             newDiv.append(p);
@@ -37,7 +38,7 @@ var topics = ["Klay Thompson", "Stephen Curry", "Kevin Duran", "Draymond Green",
             $("#nba-view").prepend(newDiv);
           }
          
-          $("#nba-view").prepend(Div);
+        
         });
 
       }
@@ -61,8 +62,10 @@ var topics = ["Klay Thompson", "Stephen Curry", "Kevin Duran", "Draymond Green",
         }
       }
 
-      $(".gif").on("click", function(event){
+      $("#gifs").on("click", function(event){
+
         event.preventDefault();
+
         var state = $(this).attr("data-state");
         if (state === "still") {
           $(this).attr("src", $(this).attr("data-animate"));
