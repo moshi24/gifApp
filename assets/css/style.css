@@ -1,0 +1,22 @@
+body {
+    background-image: url("nba.gif")  
+}
+.jumbotron {
+    background-color: blue;
+    color: yellow;
+    font-weight: bolder;
+}
+
+label {
+    margin: 5px;
+    color: aliceblue;
+    font-weight: bolder;
+}
+
+#nba-input {
+    margin: 5px;
+}
+
+.nba-btn {
+    margin: 5px;
+}
